@@ -1,16 +1,16 @@
-import {useEffect,useRef} from 'react';
+import {useEffect,useState,useRef} from 'react';
 import {FcGoogle} from 'react-icons/fc'
 import {BsGithub} from 'react-icons/bs'
 
 const Login = () => {
     const headerRef = useRef(null);
-
+    const [isGradientComplete, setIsGradientComplete] = useState(false);
     useEffect(()=>{
        const updateMousePosition =(MouseEvent)=>{
             if(!headerRef.current) return;
-            const {clientX,clientY} = MouseEvent;
+            const {clientX} = MouseEvent;
             headerRef.current.style.setProperty('--x',`${clientX}px`);
-            headerRef.current.style.setProperty('--y',`${clientY}px`);
+            
        } 
        window.addEventListener('mousemove',updateMousePosition);
        return()=>{
@@ -21,14 +21,15 @@ const Login = () => {
 
 
   return (
-    <div className='login-container'>
-        <div className='login-header' ref={headerRef}>
+    <div className='login-container' ref={headerRef}>
+        <div className='login-container__card'>
+        <div className={`login-header ${isGradientComplete ? 'text-black' : ''}`} ref={headerRef}>
             <h1>Login</h1>
         </div>
         <div className='login-component'>
             <div className='login-socials'>
               <div className='login__byGoogle'>
-                <button>
+                <button className='login-btn'>
                     <div className='login__btn-icon'>
                         <FcGoogle/>
                     </div>
@@ -36,7 +37,7 @@ const Login = () => {
                 </button>
               </div> 
               <div className='login__byGithub'>
-                 <button>
+                 <button className='login-btn'>
                     <div className='login__btn-icon'>
                         <BsGithub/>
                     </div>
@@ -46,14 +47,15 @@ const Login = () => {
             </div>
             <form className='login-form'>
                 <label htmlFor='email'>Email</label>
-                <input id='email' type='text' placeholder='Email'></input>
+                <input id='email' type='text' ></input>
                 <label htmlFor='password'>Password</label>
-                <input id='password' type='password' placeholder='password'></input>
+                <input id='password' type='password'></input>
                 <span className='login-form__forgotPwd'>forgot password?</span>
                 <button className='login-form btn'>Sign In</button>
             </form>
         </div>
 
+        </div>
     </div>
   )
 }
