@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter&family=Poppins:wght@100;300&family=Roboto+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter&family=Poppins:wght@100;300&family=Roboto+Condensed:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter&family=Pixelify+Sans&family=Poppins:wght@100;300&family=Roboto+Condensed:wght@300&display=swap');
 
 *,
 ::after,
@@ -77,6 +77,9 @@ html {
 
   --secondary-font:'Roboto Condensed',
     sans-serif;
+
+  --website-font:'Pixelify Sans',
+    cursive
 }
 
 body {
@@ -192,18 +195,34 @@ ul {
   justify-content: center;
 }
 
+.website-name h2{
+  position: absolute;
+  top: 22%;
+  left: 13%;
+  color: white;
+  font-family:var(--website-font);
+  font-size: 1.5rem;
+}
+
+
 .login-container__card{
   background: rgb(56, 56, 56);
-  background: radial-gradient(circle, rgba(56, 56, 56, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: radial-gradient(circle farthest-side, rgb(56, 56, 56) 0%, rgba(3, 2, 2, 1) 36%);
   color:var(--grey-100);
   display: flex;
   min-height: 60vh;
+  padding: 5rem;
   min-width: var(--view-width);
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-1);
+}
 
+.bg-video video{
+  width: 60vh;
+  object-fit: cover;
+  z-index: '-1';
 }
 
 .login-header{
@@ -212,6 +231,7 @@ ul {
 
 .login-component{
   width: 20rem;
+  
 }
 
 .login__byGoogle,.login__byGithub{
