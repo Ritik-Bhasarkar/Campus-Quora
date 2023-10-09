@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 const Quora = () => {
   return (
-    <div>User Loged in</div>
+    <div className='quora-container'>
+      <Navbar/>
+    </div>
   )
 }
 
