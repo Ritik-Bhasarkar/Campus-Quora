@@ -2,7 +2,7 @@ import React from 'react'
 
 const Quora = () => {
   return (
-    <div>Quora</div>
+    <div>User Loged in</div>
   )
 }
 
