@@ -19,10 +19,15 @@ const Login = () => {
                 </video>
           </div>
          <div className='login-container__secondHalf'>
-
-            <div className='login-component__header'>
-              <h2>Login & Signin</h2>
+          <h1 className='website-name'>Campus
+          <span className='blinking-letter'>Q</span>
+          </h1>
+          <p>A place to share knowledge and better understand the world</p>
+            <div className='login-component__loginText'>
+              <h2>Sign In</h2>
             </div>
+            
+          <div className='login-component__wrapper'>
             <div className='login-component__socials'>
               <div className='login__byGoogle'>
                 <button className='login-btn'>
@@ -40,6 +45,7 @@ const Login = () => {
                     <span>Continue with GitHub</span>
                 </button>
               </div> 
+              <p className='login__seperate'>or</p>
             </div>
             <form className='login-form'>
                 <label htmlFor='email'>Email</label>
@@ -49,6 +55,20 @@ const Login = () => {
                 <span className='login-form__forgotPwd'>forgot password?</span>
                 <button className='login-form btn'>Sign In</button>
             </form>
+            <div className='signUp-component'>
+              <span>Don't have an account? signUp</span>
+            </div>
+            </div>
+            <div className="login__footer">
+              <p>About</p>
+              
+              <p>Careers</p>
+             
+              <p>Privacy</p>
+              <p>Terms</p>
+              <p>Contact</p>
+              <p>&copy; CampusQ Inc. 2023</p>
+        </div>
           </div>
         </div>  
     </div>
