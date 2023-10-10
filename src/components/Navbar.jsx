@@ -9,28 +9,28 @@ const Navbar = () => {
   return (
     <div className='navbar-container'>
         <div className='navbar-left'>
-        <div className='navbar__logo'>
-            <span >C</span>
-            <span className='blinking-letter small'>Q</span>
-        </div>
-        <div className='navbar__search'>
-            <label htmlFor='search'></label>
-            <input id='search' type='text' placeholder='#Explore'></input>
-        </div>
+            <div className='navbar__logo'>
+                <span >C</span>
+                <span className='blinking-letter small'>Q</span>
+            </div>
+            <div className='navbar__search'>
+                <label htmlFor='search'></label>
+                <input id='search' type='text' placeholder='#Explore'></input>
+            </div>
         </div>
         <div className='navbar-right'>
             <div className='navbar__home'>
-                <HiHome/>
-                <span>Home</span>
+                <HiHome className='icon home'/>
+                <span className='home-text'>Home</span>
             </div>
             <div className='navbar__spaces'>
-                <MdWorkspaces/>
+                <MdWorkspaces className='icon'/>
             </div>
             <div className='navbar__chats'>
-                <BsChatSquareTextFill/>
+                <BsChatSquareTextFill className='icon'/>
             </div>
             <div className='navbar__notification'>
-                <FaBell/>
+                <FaBell className='icon'/>
             </div>
             <div className='navbar__question'>
                 <button> Ask Question</button>
