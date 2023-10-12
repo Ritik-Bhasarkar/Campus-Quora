@@ -19,23 +19,23 @@ const Navbar = () => {
             </div>
         </div>
         <div className='navbar-right'>
-            <div className='navbar__home'>
+            <div className='navbar-icon'>
                 <HiHome className='icon home'/>
                 <span className='home-text'>Home</span>
             </div>
-            <div className='navbar__spaces'>
+            <div className='navbar-icon' >
                 <MdWorkspaces className='icon'/>
             </div>
-            <div className='navbar__chats'>
+            <dv className='navbar-icon'>
                 <BsChatSquareTextFill className='icon'/>
-            </div>
-            <div className='navbar__notification'>
+            </dv>
+            <div className='navbar-icon'>
                 <FaBell className='icon'/>
             </div>
-            <div className='navbar__question'>
-                <button> Ask Question</button>
+            <div classname='navbar-button'>
+                <button className='btn'> Ask Question</button>
             </div>
-            <div className='navbar__profile'>
+            <div className='navar-avatar'>
                 <Avatar alt='user' src='https://media.licdn.com/dms/image/C5112AQEKhP8DbB0mZQ/article-cover_image-shrink_720_1280/0/1520179924375?e=2147483647&v=beta&t=NYxzVw01LZbqWkAyJ2ga0EmyVgTMtT5xGHHXvPay7lA'/>
             </div>
         </div>
